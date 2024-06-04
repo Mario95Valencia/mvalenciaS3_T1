@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="mvalenciaS3_T1.Views.registrar"
+             Title="registrar">
+    <VerticalStackLayout
+        Spacing="20"
+        Padding="20">
+        <Label 
+            Text="VENTANA REGISTRO"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <Entry x:Name="txt_usuario"
+               Placeholder="Ingrese un usuario"
+               FontSize="15"/>
+        <Entry x:Name="txt_contrasena"
+               Placeholder="Ingrese la contraseña"
+               FontSize="15"/>
+        <Button x:Name="btn_guardar"
+                Text="GUARDAR"
+                HorizontalOptions="Center"
+                Clicked="btn_guardar_Clicked"/>
+    </VerticalStackLayout>
+</ContentPage>
