@@ -14,20 +14,51 @@
             TextColor="Red"/>
         <Image Source="https://thumbs.dreamstime.com/b/login-icon-button-vector-illustration-isolated-white-background-126999474.jpg" WidthRequest="100"/>
         <Image Source="login.png" WidthRequest="100"/>
-        <Entry x:Name="txt_usuario"
-               Placeholder="Ingrese su usuario"               
+        <Grid RowSpacing="15">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Label Text="USUARIO"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   FontSize="18"
+                   Grid.Row="0"
+                   Grid.Column="0"/>
+            <Entry x:Name="txt_usuario"
+               Placeholder="Ingrese su usuario"
+                   Grid.Row="0"
+                   Grid.Column="1"
             />
-        <Entry x:Name="txt_contrasena"
+            <Label Text="CONTRASEÑA"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   FontSize="18"
+                   Grid.Row="1"
+                   Grid.Column="0"/>
+            <Entry x:Name="txt_contrasena"
                Placeholder="Ingrese su contraseña"
                IsPassword="True"
+                   Grid.Row="1"
+                   Grid.Column="1"
                />
         <Button x:Name="btn_inicio"
                 Text="INICIAR SESIÓN"
                 Clicked="btn_inicio_Clicked"
-                HorizontalOptions="Center"/>
+                HorizontalOptions="Center"
+                Grid.Row="3"
+                Grid.Column="0"/>
         <Button x:Name="btn_crear"
                 Text="REGISTRAR USUARIO"
                 Clicked="btn_crear_Clicked"
-                HorizontalOptions="Center"/>
+                HorizontalOptions="Center"
+                Grid.Row="3"
+                Grid.Column="1"/>
+        </Grid>
     </VerticalStackLayout>
 </ContentPage>
